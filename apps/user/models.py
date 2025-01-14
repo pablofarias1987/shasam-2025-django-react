@@ -11,6 +11,7 @@ class UserAccountManager(BaseUserManager):
         email = self.normalize_email(email)
         user = self.model(email=email, **extra_fields)
 
+
         user.set_password(password)
         user.save()
 
@@ -30,13 +31,17 @@ class UserAccount(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(max_length=255, unique=True)
     first_name = models.CharField(max_length=255)
     last_name = models.CharField(max_length=255)
+    dni = models.CharField(max_length=255)
+    country = models.CharField(max_length=255)
+    commune = models.CharField(max_length=255)
+    address = models.CharField(max_length=255)
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
 
     objects = UserAccountManager()
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ['first_name', 'last_name']
+    REQUIRED_FIELDS = ['first_name', 'last_name', 'dni', 'country','commune', 'address']
 
     def get_full_name(self):
         return self.first_name + ' ' + self.last_name
@@ -46,3 +51,16 @@ class UserAccount(AbstractBaseUser, PermissionsMixin):
 
     def __str__(self):
         return self.email
+
+    def dni_(self):
+        return self.dni
+    
+    def country_(self):
+        return self.country
+
+    def commune_(self):
+        return self.commune
+
+    def address_(self):
+        return self.address
+

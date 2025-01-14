@@ -128,7 +128,7 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 DATABASES = {
-    "default": env.db("DATABASE_URL", default="postgres:///shasam2025"),
+    "default": env.db("DATABASE_URL", default="postgres:///shasam-2025"),
 }
 
 DATABASES["default"]["ATOMIC_REQUESTS"] = True
