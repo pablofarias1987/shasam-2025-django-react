@@ -1,4 +1,5 @@
 from django.db import models
+from datetime import datetime
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin, BaseUserManager
 import os
 
@@ -35,6 +36,7 @@ class UserAccount(AbstractBaseUser, PermissionsMixin):
     country = models.CharField(max_length=255)
     commune = models.CharField(max_length=255)
     address = models.CharField(max_length=255)
+    date_issued = models.DateTimeField(default=datetime.now)
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
 

@@ -4,7 +4,12 @@ import { connect } from 'react-redux'
 import { logout } from '../../redux/actions/auth'
 import { Fragment, useEffect, useState } from 'react'
 import { Navigate } from 'react-router'
+import Alert from '../../components/alert'
 
+
+function classNames(...classes) {
+  return classes.filter(Boolean).join(' ')
+}
 
 function Navbar ({
   isAuthenticated,
@@ -12,15 +17,19 @@ function Navbar ({
   logout
 }){
   const [redirect, setRedirect] = useState(false);
+  const [render, setRender] = useState(false);
+
+  
+
   const logoutHandler = () => {
     logout()
     setRedirect(true);
   }
-
-  if (redirect){
-    window.location.reload(false)
+  if (redirect)
     return <Navigate to='/' />;
-  }
+
+
+  
 
   const authLinks = (
     <>
@@ -33,7 +42,7 @@ function Navbar ({
           </span>
         </button>
       </div>
-  <div
+  <nav
   as={Fragment}
   enter="transition ease-out duration-100"
   enterFrom="transform opacity-0 scale-95"
@@ -41,7 +50,7 @@ function Navbar ({
   leave="transition ease-in duration-75"
   leaveFrom="transform opacity-100 scale-100"
   leaveTo="transform opacity-0 scale-95"
->
+></nav>
   <div className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
     <div className="py-1">
       <>
@@ -59,25 +68,26 @@ function Navbar ({
       </>
       
       
-      <form method="POST" action="#">
+      
         <>
           {({ active }) => (
-            <button
-              onClick={logoutHandler}
-              className={(
-                active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                'block w-full text-left px-4 py-2 text-sm'
+            <li
+              onClick={logout}
+              className={classNames(
+                active ? '' : '',
+                ''
               )}
-            >
-              Sign out
-            </button>
+            ><link>
+              Sign out</link>
+            </li>
           )}
         </>
-      </form>
+
+      
     </div>
   </div>
-</div>
 </>
+
 )
 
 const guestLinks = (
@@ -93,38 +103,35 @@ const guestLinks = (
 </Link>
 </Fragment>
 )
-    return (
+    return (<>
       <nav className="navbar">
         <div className="navbar-logo">SHASAM</div>
         <ul className="navbar-links">
         <li><Link to="/">Inicio</Link></li>
-        <li><Link to="/signup">Registrarse</Link></li>
-        <li><Link to="/login">Iniciar secion</Link></li>
-        </ul>
+
+        
 
 
-        <form method="POST" action="#">
+        
 
   {({ active }) => (
-    <button
+   <li> <Link
       onClick={logoutHandler}
-      className={(
-        active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-        'block w-full text-left px-4 py-2 text-sm'
+      className={classNames(
+        active ? '' : '',
+        ''
       )}
     >
       Sign out
-    </button>
-  )}
-{
-                isAuthenticated ? authLinks:guestLinks
-              }
-</form>
-
+   
+  
+ 
+ </Link></li>)}
+</ul>
       </nav>
 
-
-    );
+<Alert/>
+      </>)
   
 }
   const mapStateToProps = state => ({
@@ -135,5 +142,4 @@ const guestLinks = (
 
   export default connect(mapStateToProps,{
     logout
-
   }) (Navbar)

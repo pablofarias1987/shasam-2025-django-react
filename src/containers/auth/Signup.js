@@ -56,7 +56,7 @@ const Signup = ({
             src=""
             alt=""
           />
-          <h2 >Register</h2>
+          <h2 >Registrarse</h2>
           
         </div>
 
@@ -65,7 +65,7 @@ const Signup = ({
             <form onSubmit={e=>onSubmit(e)} className="">
               <div>
                 <label htmlFor="first_name" className=" ">
-                  First Name
+                  Nombre
                 </label>
                 <div className="">
                   <input
@@ -80,7 +80,7 @@ const Signup = ({
               </div>
               <div>
                 <label htmlFor="last_name" className=" ">
-                  Last Name
+                  Apellido
                 </label>
                 <div className="">
                   <input
@@ -96,7 +96,7 @@ const Signup = ({
 
               <div>
                 <label htmlFor="email" className=" ">
-                  Email address
+                  Email
                 </label>
                 <div className="">
                   <input
@@ -126,7 +126,7 @@ const Signup = ({
               </div>
               <div className="">
               <label htmlFor="country" className=" ">
-                  country
+                  Ciudad
                 </label>
                 <div>
                   <input
@@ -141,7 +141,7 @@ const Signup = ({
               </div>
               <div>
               <label htmlFor="commune" className=" ">
-                  comuna
+                  Comuna
                 </label>
                 <div className="">
                   <input
@@ -156,7 +156,7 @@ const Signup = ({
               </div>
               <div>
               <label htmlFor="address" className=" ">
-                  direccion
+                  Direccion
                 </label>
                 <div className="">
                   <input
@@ -171,7 +171,7 @@ const Signup = ({
               </div>
               <div>
                 <label htmlFor="password" className="">
-                  Password
+                  Contraseña
                 </label>
                 <div className="mt-1">
                   <input
@@ -187,7 +187,7 @@ const Signup = ({
               
               <div>
                 <label htmlFor="password" className=" ">
-                  Repeat Password
+                  Repetir contraseña
                 </label>
                 <div className="mt-1">
                   <input
@@ -207,7 +207,7 @@ const Signup = ({
                   type="submit"
                   className=" "
                 >
-                  Register
+                  Registrarse
                 </button>
               </div>
             </form>
