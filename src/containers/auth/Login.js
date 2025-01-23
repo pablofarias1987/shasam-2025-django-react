@@ -5,6 +5,8 @@ import {connect} from 'react-redux'
 import { login } from '../../redux/actions/auth'
 import Loader from 'react-loader-spinner'
 import { Navigate } from 'react-router'
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
 
 const Login = ({
   login,
@@ -58,79 +60,28 @@ const Login = ({
 
         <div className=" ">
           <div className=" ">
-            <form onSubmit={e=>onSubmit(e)} className="space-y-6">
-              <div>
-                <label htmlFor="email" className=" ">
-                  Email address
-                </label>
-                <div className="mt-1">
-                  <input
-                    name="email"
-                    value={email}
-                    onChange={e=>onChange(e)}
-                    type="email"
-                    required
-                    className=" "
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label htmlFor="password" className=" ">
-                  Password
-                </label>
-                <div className="mt-1">
-                  <input
-                    name="password"
+          
+            <Form onSubmit={e=>onSubmit(e)}>
+      <Form.Group className="mb-3" controlId="formGroupEmail">
+        <Form.Label>Email address</Form.Label>
+        <Form.Control type="email" value={email} name="email"
+                    onChange={e=>onChange(e)} placeholder="Enter email" required />
+      </Form.Group>
+      <Form.Group className="mb-3" controlId="formGroupPassword">
+        <Form.Label>Password</Form.Label>
+        <Form.Control type="password"   name="password"
                     value={password}
-                    onChange={e=>onChange(e)}
-                    type="password"
-                    required
-                    className=" "
-                  />
-                </div>
-              </div>
-
-              <div className="flex items-center justify-between">
-                {/* <div className="flex items-center">
-                  <input
-                    id="remember-me"
-                    name="remember-me"
-                    type="checkbox"
-                    className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded"
-                  />
-                  <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">
-                    Remember me
-                  </label>
-                </div> */}
-
-                <div className="text-sm">
+                    onChange={e=>onChange(e)} placeholder="Contraseña" required />
+      </Form.Group>
+      <div className="text-sm">
                   <Link to="/reset_password" className=" ">
                     Forgot your password?
                   </Link>
                 </div>
-              </div>
-
-              <div>
-                {loading ? 
-                <button
-                className=" "
-              >
-                <Loader
-                type="Oval"
-                color="#fff"
-                width={20}
-                height={20}
-                />
-              </button>:
-              <button
-              type="submit"
-              className=" "
-            >
-              Login
-            </button>}
-              </div>
-            </form>
+                <Button variant="dark" type="submit">Iniciar sesion</Button>
+    </Form>
+  
+            
           </div>
         </div>
       </div>

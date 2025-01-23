@@ -13,7 +13,7 @@ const DashboardLink =()=>{
                 'group flex items-center px-2 py-2 text-base font-medium rounded-md'
             )}
             >
-            <CalendarIcon
+            <div
                 className={classNames(
                 'mr-4 flex-shrink-0 h-6 w-6 text-gray-400 group-hover:text-gray-500',
                 )}

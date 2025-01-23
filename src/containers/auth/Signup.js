@@ -4,6 +4,13 @@ import { useState, useEffect } from 'react'
 import {connect} from 'react-redux'
 import { signup } from '../../redux/actions/auth'
 
+
+import Button from 'react-bootstrap/Button';
+import Col from 'react-bootstrap/Col';
+import Form from 'react-bootstrap/Form';
+import InputGroup from 'react-bootstrap/InputGroup';
+import Row from 'react-bootstrap/Row';
+
 const Signup = ({
   signup
 }) => {
@@ -49,173 +56,170 @@ const Signup = ({
 
   return (
     <Layout>
-      <div className="">
-        <div className="">
-          <img
-            className=""
-            src=""
-            alt=""
-          />
-          <h2 >Registrarse</h2>
-          
-        </div>
 
-        <div >
-          <div>
-            <form onSubmit={e=>onSubmit(e)} className="">
-              <div>
-                <label htmlFor="first_name" className=" ">
-                  Nombre
-                </label>
-                <div className="">
-                  <input
-                    name="first_name"
-                    value={first_name}
-                    onChange={e=>onChange(e)}
-                    type="text"
-                    required
-                    className=" "
-                  />
-                </div>
-              </div>
-              <div>
-                <label htmlFor="last_name" className=" ">
-                  Apellido
-                </label>
-                <div className="">
-                  <input
-                    name="last_name"
-                    value={last_name}
-                    onChange={e=>onChange(e)}
-                    type="text"
-                    required
-                    className=" "
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label htmlFor="email" className=" ">
-                  Email
-                </label>
-                <div className="">
-                  <input
-                    name="email"
-                    value={email}
-                    onChange={e=>onChange(e)}
-                    type="email"
-                    required
-                    className=""
-                  />
-                </div>
-              </div>
-              <div className="">
-              <label htmlFor="dni" className=" ">
-                  Rut o Dni
-                </label>
-                <div className="">
-                  <input
-                    name="dni"
-                    value={dni}
-                    onChange={e=>onChange(e)}
-                    type="text"
-                    required
-                    className=" "
-                  />
-                </div>
-              </div>
-              <div className="">
-              <label htmlFor="country" className=" ">
-                  Ciudad
-                </label>
-                <div>
-                  <input
-                    name="country"
-                    value={country}
-                    onChange={e=>onChange(e)}
-                    type="text"
-                    required
-                    className=" "
-                  />
-                </div>
-              </div>
-              <div>
-              <label htmlFor="commune" className=" ">
-                  Comuna
-                </label>
-                <div className="">
-                  <input
-                    name="commune"
-                    value={commune}
-                    onChange={e=>onChange(e)}
-                    type="text"
-                    required
-                    className=" "
-                  />
-                </div>
-              </div>
-              <div>
-              <label htmlFor="address" className=" ">
-                  Direccion
-                </label>
-                <div className="">
-                  <input
-                    name="address"
-                    value={address}
-                    onChange={e=>onChange(e)}
-                    type="text"
-                    required
-                    className=" "
-                  />
-                </div>
-              </div>
-              <div>
-                <label htmlFor="password" className="">
-                  Contraseña
-                </label>
-                <div className="mt-1">
-                  <input
-                    name="password"
-                    value={password}
-                    onChange={e=>onChange(e)}
-                    type="password"
-                    required
-                    className=""
-                  />
-                </div>
-              </div>
+     
+        <Form  onSubmit={e=>onSubmit(e)}>
+          <Row className="mb-3">
+            <Form.Group
+              as={Col}
+              md="4"
+              controlId="validationFormik101"
+              className="position-relative"
+            >
+              <Form.Label htmlFor="first_name" >Nombre</Form.Label>
+              <Form.Control
+                type="text"
+                name="first_name"
+                value={first_name}
+                onChange={e=>onChange(e)}
+                
               
-              <div>
-                <label htmlFor="password" className=" ">
-                  Repetir contraseña
-                </label>
-                <div className="mt-1">
-                  <input
-                    name="re_password"
-                    value={re_password}
-                    onChange={e=>onChange(e)}
-                    type="password"
-                    required
-                    className=" "
-                  />
-                </div>
-              </div>
+              />
+
+</Form.Group>
+<Form.Group as={Col} md="4" controlId="vvalidationFormik102">
+                         <Form.Label htmlFor="last_name">Apellido</Form.Label>
+                         <Form.Control
+                type="text"
+                name="last_name"
+                value={last_name}
+                onChange={e=>onChange(e)}
+              />
+
+</Form.Group>
+
+            <Form.Group as={Col} md="4" controlId="validationFormikUsername2">
+              <Form.Label htmlFor="email">Email</Form.Label>
+              <InputGroup hasValidation>
+                <InputGroup.Text id="inputGroupPrepend">@</InputGroup.Text>
+                <Form.Control
+                  type="text"
+                  placeholder="Email"
+                  aria-describedby="inputGroupPrepend"
+                  name="email"
+                  value={email}
+                  onChange={e=>onChange(e)}
+   
+                />
+
+              </InputGroup>
+            </Form.Group>
+          </Row>
+          <Row className="mb-3">
+            <Form.Group
+              as={Col}
+              md="6"
+              controlId="validationFormik103"
+              className="position-relative"
+            >
+              <Form.Label htmlFor="dni">Rut o Dni</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Dni"
+                name="dni"
+                value={dni}
+                onChange={e=>onChange(e)}
+     
+              />
 
 
-              <div>
-                <button
-                  type="submit"
-                  className=" "
-                >
-                  Registrarse
-                </button>
-              </div>
-            </form>
+            </Form.Group>
+            <Form.Group
+              as={Col}
+              md="3"
+              controlId="validationFormik104"
+              className="position-relative"
+            >
+              <Form.Label htmlFor="country">Ciudad</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Ciudad"
+                name="country"
+                value={country}
+                onChange={e=>onChange(e)}
+          
+              />
 
-            
-          </div>
-        </div>
-      </div>
+            </Form.Group>
+            <Form.Group
+              as={Col}
+              md="3"
+              controlId="validationFormik105"
+              className="position-relative"
+            >
+              <Form.Label htmlFor="commune">Comuna</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Comuna"
+                name="commune"
+                value={commune}
+                onChange={e=>onChange(e)}
+    
+              />
+
+
+            </Form.Group>
+          </Row>
+          <Row className="mb-3">
+          <Form.Group
+              as={Col}
+              md="3"
+              controlId="validationFormik106"
+              className="position-relative"
+            >
+            <Form.Label htmlFor="address">Direccion</Form.Label>
+            <Form.Control
+              type="text"
+              required
+              value={address}
+              name="address"
+              onChange={e=>onChange(e)}
+          
+            />
+ 
+          </Form.Group>
+          <Form.Group as={Col} md="3" controlId="validationFormik07" className="position-relative">
+              <Form.Label htmlFor="password">Contraseña</Form.Label>
+              <Form.Control
+                type="password"
+                placeholder="Contraseña"
+                name="password"
+                value={password}
+                onChange={e=>onChange(e)}
+                
+              />
+
+            </Form.Group>
+            <Form.Group as={Col} md="3" controlId="validationFormik08" className="position-relative">
+              <Form.Label htmlFor="re_password">Repetir contraseña</Form.Label>
+              <Form.Control
+                type="password"
+                placeholder="Repetir contaseña"
+                name="re_password"
+                value={re_password}
+                onChange={e=>onChange(e)}
+       
+              />
+
+            </Form.Group>
+            </Row>
+          {/* <Form.Group className="position-relative mb-3">
+            <Form.Check
+              required
+              name="terms"
+              label="Agree to terms and conditions"
+              onChange={handleChange}
+              isInvalid={!!errors.terms}
+              feedback={errors.terms}
+              feedbackType="invalid"
+              id="validationFormik106"
+              feedbackTooltip
+            />
+          </Form.Group> */}
+          <Button variant="info" type="submit">Registrarse</Button>
+        </Form>
+      
+   
     </Layout>
   )
 }
