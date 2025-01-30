@@ -3,13 +3,12 @@ import { useState, useEffect } from 'react'
 
 import {connect} from 'react-redux'
 import { signup } from '../../redux/actions/auth'
-
-
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Row from 'react-bootstrap/Row';
+import style from '../../components/Styles/Signup.module.css';
 
 const Signup = ({
   signup
@@ -56,9 +55,10 @@ const Signup = ({
 
   return (
     <Layout>
-
+    <h2 className={style.h2}>Crear cuenta</h2>
+<br/>
      
-        <Form  onSubmit={e=>onSubmit(e)}>
+        <form  className={style.form} onSubmit={e=>onSubmit(e)}>
           <Row className="mb-3">
             <Form.Group
               as={Col}
@@ -66,24 +66,28 @@ const Signup = ({
               controlId="validationFormik101"
               className="position-relative"
             >
-              <Form.Label htmlFor="first_name" >Nombre</Form.Label>
+              <Form.Label htmlFor="first_name" >Nombres</Form.Label>
               <Form.Control
                 type="text"
+                placeholder="Ingresar nombres"
                 name="first_name"
                 value={first_name}
                 onChange={e=>onChange(e)}
+                required
                 
               
               />
 
 </Form.Group>
 <Form.Group as={Col} md="4" controlId="vvalidationFormik102">
-                         <Form.Label htmlFor="last_name">Apellido</Form.Label>
+                         <Form.Label htmlFor="last_name">Apellidos</Form.Label>
                          <Form.Control
                 type="text"
+                placeholder="Ingresar apellidos"
                 name="last_name"
                 value={last_name}
                 onChange={e=>onChange(e)}
+                required
               />
 
 </Form.Group>
@@ -94,12 +98,12 @@ const Signup = ({
                 <InputGroup.Text id="inputGroupPrepend">@</InputGroup.Text>
                 <Form.Control
                   type="text"
-                  placeholder="Email"
+                  placeholder="Ingresar Email"
                   aria-describedby="inputGroupPrepend"
                   name="email"
                   value={email}
                   onChange={e=>onChange(e)}
-   
+                  required
                 />
 
               </InputGroup>
@@ -108,53 +112,54 @@ const Signup = ({
           <Row className="mb-3">
             <Form.Group
               as={Col}
-              md="6"
+              md="4"
               controlId="validationFormik103"
               className="position-relative"
             >
               <Form.Label htmlFor="dni">Rut o Dni</Form.Label>
               <Form.Control
                 type="text"
-                placeholder="Dni"
+                
+                placeholder="Ingresar rut o dni"
                 name="dni"
                 value={dni}
                 onChange={e=>onChange(e)}
-     
+                required
               />
 
 
             </Form.Group>
             <Form.Group
               as={Col}
-              md="3"
+              md="4"
               controlId="validationFormik104"
               className="position-relative"
             >
               <Form.Label htmlFor="country">Ciudad</Form.Label>
               <Form.Control
                 type="text"
-                placeholder="Ciudad"
+                placeholder="Ingresqar ciudad"
                 name="country"
                 value={country}
                 onChange={e=>onChange(e)}
-          
+                required
               />
 
             </Form.Group>
             <Form.Group
               as={Col}
-              md="3"
+              md="4"
               controlId="validationFormik105"
               className="position-relative"
             >
               <Form.Label htmlFor="commune">Comuna</Form.Label>
               <Form.Control
                 type="text"
-                placeholder="Comuna"
+                placeholder="Ingresar comuna"
                 name="commune"
                 value={commune}
                 onChange={e=>onChange(e)}
-    
+                required
               />
 
 
@@ -163,13 +168,14 @@ const Signup = ({
           <Row className="mb-3">
           <Form.Group
               as={Col}
-              md="3"
+              md="4"
               controlId="validationFormik106"
               className="position-relative"
             >
             <Form.Label htmlFor="address">Direccion</Form.Label>
             <Form.Control
               type="text"
+              placeholder="Ingresar direccion"
               required
               value={address}
               name="address"
@@ -182,23 +188,23 @@ const Signup = ({
               <Form.Label htmlFor="password">Contraseña</Form.Label>
               <Form.Control
                 type="password"
-                placeholder="Contraseña"
+                placeholder="Ingresar contraseña"
                 name="password"
                 value={password}
                 onChange={e=>onChange(e)}
-                
+                required
               />
 
             </Form.Group>
-            <Form.Group as={Col} md="3" controlId="validationFormik08" className="position-relative">
+            <Form.Group as={Col} md="4" controlId="validationFormik08" className="position-relative">
               <Form.Label htmlFor="re_password">Repetir contraseña</Form.Label>
               <Form.Control
                 type="password"
-                placeholder="Repetir contaseña"
+                placeholder="Reingresar contaseña"
                 name="re_password"
                 value={re_password}
                 onChange={e=>onChange(e)}
-       
+                required
               />
 
             </Form.Group>
@@ -217,7 +223,7 @@ const Signup = ({
             />
           </Form.Group> */}
           <Button variant="info" type="submit">Registrarse</Button>
-        </Form>
+        </form>
       
    
     </Layout>

@@ -1,0 +1,13 @@
+ 
+
+  .banner2 {
+    background-image: url('../../image/banner.jpeg'); /* Replace with your image URL */
+    background-size: cover;   /* Make the image cover the entire area */
+    background-position: center center; /* Center the image */
+    color: white;
+    text-align: center;
+    padding: 100px 20px;  /* Adjust padding for spacing */
+    position: relative;
+    width: 1300px;
+    height: auto;
+}

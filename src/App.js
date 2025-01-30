@@ -10,6 +10,9 @@ import Signup from './containers/auth/Signup';
 import Activate from './containers/auth/Activate';
 import ResetPassword from './containers/auth/ResetPassword';
 import ResetPasswordConfirm from './containers/auth/ResetPasswordConfirm';
+import Programs from './containers/pages/Programs';
+import About from './containers/pages/About';
+import Treatments from './containers/pages/Treatments';
 
 
 function App() {
@@ -27,6 +30,9 @@ function App() {
           <Route exact path='/reset_password' element={<ResetPassword/>} />
           <Route exact path='/password/reset/confirm/:uid/:token' element={<ResetPasswordConfirm/>} />
           <Route exact path='/dashboard' element={<Dashboard/>}/>
+          <Route exact path='/about' element={<About/>}/>
+          <Route exact path='/programs' element={<Programs/>}/>
+          <Route exact path='/treatments' element={<Treatments/>}/>
           <Route exact path='/thankyou' element={<ThankYou/>}/>
           </Routes>
           </Router>

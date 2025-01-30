@@ -3,10 +3,10 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import {connect} from 'react-redux'
 import { login } from '../../redux/actions/auth'
-import Loader from 'react-loader-spinner'
 import { Navigate } from 'react-router'
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import Col from 'react-bootstrap/Col';
 
 const Login = ({
   login,
@@ -49,11 +49,11 @@ const Login = ({
             src=" "
             alt=" "
           />
-          <h2 className=" ">Sign in to your account</h2>
+          <h2 className=" ">Iniciar con tu cuenta</h2>
           <p className=" ">
-            Or{' '}
+            O{' '}
             <Link to="/signup" className=" ">
-              register
+              Registarse
             </Link>
           </p>
         </div>
@@ -61,25 +61,25 @@ const Login = ({
         <div className=" ">
           <div className=" ">
           
-            <Form onSubmit={e=>onSubmit(e)}>
-      <Form.Group className="mb-3" controlId="formGroupEmail">
-        <Form.Label>Email address</Form.Label>
-        <Form.Control type="email" value={email} name="email"
-                    onChange={e=>onChange(e)} placeholder="Enter email" required />
-      </Form.Group>
-      <Form.Group className="mb-3" controlId="formGroupPassword">
-        <Form.Label>Password</Form.Label>
-        <Form.Control type="password"   name="password"
+          <Form onSubmit={e=>onSubmit(e)}>
+              <Form.Group as={Col} md="3" controlId="formGroupEmail">
+                <Form.Label>Email</Form.Label>
+                  <Form.Control type="email" value={email} name="email"
+                    onChange={e=>onChange(e)} placeholder="Ingresar email" required />
+               </Form.Group>
+               <Form.Group as={Col} md="3" controlId="formGroupPassword" className="position-relative">
+                <Form.Label>Contraseña</Form.Label>
+                  <Form.Control type="password"   name="password"
                     value={password}
-                    onChange={e=>onChange(e)} placeholder="Contraseña" required />
-      </Form.Group>
-      <div className="text-sm">
+                    onChange={e=>onChange(e)} placeholder="Ingresar contraseña" required />
+              </Form.Group>
+                <div className="text-sm">
                   <Link to="/reset_password" className=" ">
-                    Forgot your password?
+                  ¿Olvidaste tu contraseña?
                   </Link>
                 </div>
                 <Button variant="dark" type="submit">Iniciar sesion</Button>
-    </Form>
+          </Form>
   
             
           </div>
