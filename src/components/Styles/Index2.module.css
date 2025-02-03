@@ -1,0 +1,44 @@
+
+.img2{
+    background-repeat: no-repeat ;
+    background-size: auto;
+    color: white;
+    padding: auto ;   /*Adjust padding for spacing */
+    position: relative;
+    width:1300px;
+
+}
+.div2{
+    width:1300px;
+    height: 800px; /* Ajusta la altura según lo que necesites */
+    background-image: url('../../image/bglanding.jpg');
+    background-size: cover; /* Hace que la imagen cubra todo el contenedor */
+    background-position: center; /* Centra la imagen */
+    display: flex; /* Usamos flexbox para alinear el botón */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    position: relative; /* Necesario si quieres posicionar el botón de manera absoluta */
+
+}
+
+.button2 {
+    padding: 10px 20px;
+    background-color: rgba(243, 10, 10, 0.5); /* Fondo oscuro y semitransparente */
+    color: rgb(245, 243, 243);
+    font-size: 39px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .button2:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Cambia el color del botón al pasar el ratón */
+  }
+  .p1{
+    font-family: Arial, sans-serif;
+    text-indent: 30px;
+    color: #e9e4e4;
+    background-color: rgba(0, 0, 0, 0.5); 
+    transition: background-color 0.5s ease;
+  }

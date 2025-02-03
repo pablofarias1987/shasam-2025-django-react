@@ -1,4 +1,4 @@
-.button{
+.button1{
     background-color: rgb(17, 17, 17);
     color:  white;
     border: none;
@@ -12,7 +12,10 @@
     border-radius: 12px;
     transition: background-color 0.3s;
 }
-
+.button1:hover {
+    background-color: #b3f3b6; /* Darker Green */
+    color:  black;
+  }
 .button2{
     background-color: #dfe207;
     color:  rgb(8, 8, 8);
@@ -28,6 +31,6 @@
     transition: background-color 0.3s;
 }
 
-.my-button:hover {
-    background-color: #45a049; /* Darker Green */
+.button2:hover {
+    background-color: #b3f3b6; /* Darker Green */
   }

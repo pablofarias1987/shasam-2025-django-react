@@ -39,17 +39,17 @@ const logoutHandler = () => {
     return (    
     <Navbar expand="lg" bg="primary" data-bs-theme="dark">
       <Container>
-        <Navbar.Brand href="#home"><Col xs={6} md={4}><Image src={LOGO_LETRAS_SHASAM_PNG}  /></Col></Navbar.Brand>
+        <Navbar.Brand href="/home"><Col xs={6} md={4}><Image src={LOGO_LETRAS_SHASAM_PNG}  /></Col></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Inicio</Nav.Link>
+            <Nav.Link href="/home">Inicio</Nav.Link>
             <Nav.Link href="/about">Quiénes somos</Nav.Link>
             <Nav.Link href="/programs">Programas</Nav.Link>
             <Nav.Link href="/treatments">Tratamientos</Nav.Link>
             </Nav>
             <Nav>
-            <Link to="/signup"> <button  className={style.button} >Registrarse</button></Link>
+            <Link to="/signup"> <button  className={style.button1} >Registrarse</button></Link>
             <Link to="/login"><button  className={style.button2} >Iniciar de sesion</button></Link>
             {/* <NavDropdown title="Cuenta" id="basic-nav-dropdown">
               <NavDropdown.Item href="/login">Iniciar de sesion</NavDropdown.Item>

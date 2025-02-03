@@ -1,10 +1,10 @@
-import Layout from '../hocs/Layout'
-import style from '../components/Styles/Index2.module.css';
-import img from '../image/bglanding.jpg';
-
+import Layout from '../../hocs/Layout'
+import style from '../../components/Styles/Index2.module.css';
+import img from '../../image/bglanding.jpg';
+import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
 
-function Home() {
+export default function Index2() {
 
     return(<Layout>
         <div className={style.div2}>
@@ -25,6 +25,3 @@ function Home() {
         </Layout>)
 }
 
-
-
-export default Home

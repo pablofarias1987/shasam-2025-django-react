@@ -11,3 +11,42 @@
     width: 1300px;
     height: auto;
 }
+
+
+.circle {
+  width: 110px;
+  height: 110px;
+  /* background-image: url('../../image/alcohol.png'); */
+  background-size: cover;    /* Asegura que la imagen cubra todo el área */
+  background-position: center;
+  border-radius: 50%;        /* Hace el fondo circular */
+  background-color: #504d52;
+  margin: 20px;
+}
+.flex1 {
+  display: flex;
+  flex-direction: row; /* Align items horizontally in a row */
+}
+
+.p1{
+  text-align: center;
+  font-weight: bold;
+  color: #504d52;
+  font-size: 25px;
+
+}
+
+.div2{
+  justify-content: space-around;
+  margin-top: 10px;
+  padding: 15px;
+  /* width: 1200px; */
+
+}
+
+.t1{
+  display: flex;
+  color:rgb(18, 138, 218);
+  margin-top: 20px;
+  padding: 10;
+}

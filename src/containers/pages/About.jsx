@@ -1,6 +1,7 @@
 import Layout from '../../hocs/Layout'
 import style from '../../components/Styles/About.module.css';
 import img from '../../image/about.jpeg';
+
 export default function About() {
 
     return(

@@ -1,19 +1,76 @@
-import Layout from '../../hocs/Layout'
 
+import { Link } from 'react-router-dom';
+import Layout from '../../hocs/Layout'
+import style from '../../components/Styles/Treatments.module.css';
+import alcohol from '../../image/alcohol.png'
+import cannabis from '../../image/cannabis.png'
+import cocaina from '../../image/cocaina.png'
+import pastillas from '../../image/pastillas.png'
+import tecnologia from '../../image/tecnologia.png'
+import sexo from '../../image/sexo.png'
+import ludopatia from '../../image/ludopatia.png'
+import pasta_base from '../../image/pasta_base.png'
 
 
 export default function Treatments() {
 
     return(<Layout>
-        
-        <title><h2>¿Quiénes Somos?</h2></title>
-        <p>
-        Somos una plataforma 100% online terapéutica llamada Shasam, con un modelo de carácter religioso, dedicada a la prevención, rehabilitación y adaptación social de jóvenes y adultos con problemas de drogodependencia, alcoholismo y marginación.
-        Hemos desarrollado un intenso y dedicado trabajo en el tratamiento de personas con problemáticas de alcohol y drogodependientes en una fase online, con duración de 9 meses.
-        </p>
-        <title>
-        Nuestro Equipo</title>
-        <p> En SHASAM contamos con un equipo multidiciplinario compuesto por Psicólog@s, Psiquiatras, Monitores de apoyo, Asistente social y Técnicos en rehabilitación. </p>
+        <div className={style.div2}>      
+             <h1 className={style.t1}>Tratamientos</h1>
+             <div className={style.flex1}>
+        <div>
+        <Link to="/">
+       <img src={alcohol}className={style.circle} alt="alcohol"/>
+       </Link>
+       <p className={style.p1}>Alcohol</p>
+      </div>
+
+       <div>
+       <Link to="/">
+       <img src={cannabis} className={style.circle} alt="cannabis"/>
+       </Link>
+       <p className={style.p1}>Cannabis</p>
+       </div>
+       <div>
+       <Link to="/">
+       <img src={cocaina} className={style.circle} alt="cocaina"/>
+       </Link>
+       <p className={style.p1}>Cocaína</p>
+       </div>
+
+       <div>
+       <Link to="/">
+       <img src={pastillas} className={style.circle} alt="pastillas"/>
+       </Link>
+       <p className={style.p1}>Pastillas</p>
+       </div>
+       <div>
+       <Link to="/">
+       <img src={tecnologia} className={style.circle} alt="tecnologia"/>
+       </Link>
+       <p className={style.p1}>Tecnologia</p>
+       </div>
+       <div>
+       <Link to="/">
+       <img src={sexo} className={style.circle} alt="sexo"/>
+       </Link>
+       <p className={style.p1}>Sexo</p>
+       </div>
+       <div>
+       <Link to="/">
+       <img src={ludopatia} className={style.circle} alt="ludopatia"/>
+       </Link>
+       <p className={style.p1}>Ludopatia</p>
+       </div>
+       <div>
+       <Link to="/">
+       <img src={pasta_base} className={style.circle} alt="pasta base"/>
+       </Link>
+       <p className={style.p1}>Pasta Base</p>
+       </div>
+
+       </div>
+       </div>
         </Layout>)
 }
 
