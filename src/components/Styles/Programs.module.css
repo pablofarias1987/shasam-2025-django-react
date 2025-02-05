@@ -1,0 +1,54 @@
+
+.p1 {
+    color:rgb(73, 69, 80);
+    font-size: 20px;
+    flex-wrap: wrap;
+    padding: 15px;
+    margin: 10px;
+}
+.h1_1{
+    display: flex;
+    color:rgb(18, 138, 218);
+    margin-top: 20px;
+    padding: 10;
+    font-weight:bold;
+    font-size: 40px;
+}
+
+.h2_2{
+    
+        display: flex;
+        color:rgb(18, 138, 218);
+        margin-top: 20px;
+        padding: 10;
+        font-size: 32px;
+}
+.h3_3{
+    
+    display: flex;
+    color:rgb(18, 138, 218);
+    margin-top: 20px;
+    padding: 10;
+    font-size: 32px;
+
+}
+
+.div_1{
+    justify-content: space-around;
+    margin-top: 15px;
+    padding: 20px;
+    /* width: 1200px; */
+
+}
+
+.banner2 {
+    background-image: url('../../image/banner.jpeg'); /* Replace with your image URL */
+    background-size: cover;   /* Make the image cover the entire area */
+    background-position: center center; /* Center the image */
+    color: white;
+    text-align: center;
+    padding: 100px 20px;  /* Adjust padding for spacing */
+    position: relative;
+    width: 1300px;
+    height: auto;
+}

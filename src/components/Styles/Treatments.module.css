@@ -50,3 +50,46 @@
   margin-top: 20px;
   padding: 10;
 }
+
+
+.p2 {
+  color:rgb(73, 69, 80);
+  font-size: 20px;
+  flex-wrap: wrap;
+  padding: 15px;
+  margin: 10px;
+}
+.h1_1{
+  display: flex;
+  color:rgb(18, 138, 218);
+  margin-top: 20px;
+  padding: 10;
+  font-weight:bold;
+  font-size: 40px;
+}
+
+.h2_2{
+  
+      display: flex;
+      color:rgb(18, 138, 218);
+      margin-top: 20px;
+      padding: 10;
+      font-size: 32px;
+}
+.h3_3{
+  
+  display: flex;
+  color:rgb(18, 138, 218);
+  margin-top: 20px;
+  padding: 10;
+  font-size: 32px;
+
+}
+
+.div_1{
+  justify-content: space-around;
+  margin-top: 15px;
+  padding: 20px;
+  /* width: 1200px; */
+
+}

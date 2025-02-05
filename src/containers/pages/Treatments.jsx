@@ -19,7 +19,7 @@ export default function Treatments() {
              <h1 className={style.t1}>Tratamientos</h1>
              <div className={style.flex1}>
         <div>
-        <Link to="/">
+        <Link to='/alcohol'>
        <img src={alcohol}className={style.circle} alt="alcohol"/>
        </Link>
        <p className={style.p1}>Alcohol</p>
@@ -48,7 +48,7 @@ export default function Treatments() {
        <Link to="/">
        <img src={tecnologia} className={style.circle} alt="tecnologia"/>
        </Link>
-       <p className={style.p1}>Tecnologia</p>
+       <p className={style.p1}>Tecnología</p>
        </div>
        <div>
        <Link to="/">
@@ -60,7 +60,7 @@ export default function Treatments() {
        <Link to="/">
        <img src={ludopatia} className={style.circle} alt="ludopatia"/>
        </Link>
-       <p className={style.p1}>Ludopatia</p>
+       <p className={style.p1}>Ludopatía</p>
        </div>
        <div>
        <Link to="/">

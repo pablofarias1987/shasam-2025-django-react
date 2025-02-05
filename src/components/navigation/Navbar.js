@@ -49,8 +49,9 @@ const logoutHandler = () => {
             <Nav.Link href="/treatments">Tratamientos</Nav.Link>
             </Nav>
             <Nav>
-            <Link to="/signup"> <button  className={style.button1} >Registrarse</button></Link>
             <Link to="/login"><button  className={style.button2} >Iniciar de sesion</button></Link>
+            <Link to="/signup"> <button  className={style.button1} >Registrarse</button></Link>
+            
             {/* <NavDropdown title="Cuenta" id="basic-nav-dropdown">
               <NavDropdown.Item href="/login">Iniciar de sesion</NavDropdown.Item>
               <NavDropdown.Item href="/signup">

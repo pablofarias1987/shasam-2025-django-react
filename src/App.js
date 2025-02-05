@@ -13,7 +13,8 @@ import ResetPasswordConfirm from './containers/auth/ResetPasswordConfirm';
 import Programs from './containers/pages/Programs';
 import About from './containers/pages/About';
 import Treatments from './containers/pages/Treatments';
-import Index2 from './containers/pages/Index2';
+import Alcohol from './containers/pages/treatments/Alcohol'
+
 
 
 function App() {
@@ -32,9 +33,8 @@ function App() {
           <Route exact path='/reset_password' element={<ResetPassword/>} />
           <Route exact path='/password/reset/confirm/:uid/:token' element={<ResetPasswordConfirm/>} />
           <Route exact path='/dashboard' element={<Dashboard/>}/>
-
-          <Route exact path='/index2' element={<Index2/>}/>
           <Route exact path='/about' element={<About/>}/>
+          <Route exact path='/alcohol' element={<Alcohol/>}/>
           <Route exact path='/programs' element={<Programs/>}/>
           <Route exact path='/treatments' element={<Treatments/>}/>
           <Route exact path='/thankyou' element={<ThankYou/>}/>

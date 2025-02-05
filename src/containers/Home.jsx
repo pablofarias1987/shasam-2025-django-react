@@ -1,5 +1,5 @@
 import Layout from '../hocs/Layout'
-import style from '../components/Styles/Index2.module.css';
+import style from '../components/Styles/Home.module.css';
 import img from '../image/bglanding.jpg';
 
 import { Link } from 'react-router-dom';
