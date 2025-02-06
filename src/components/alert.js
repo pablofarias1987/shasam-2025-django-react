@@ -1,6 +1,6 @@
 import {Fragment} from 'react'
 import {connect} from 'react-redux'
-
+import style from './Styles/Navbar.module.css';
 
 
 function Alert ({ alert }) {
@@ -8,13 +8,13 @@ function Alert ({ alert }) {
     const displayAlert = () => {
         if (alert !== null){
             return (
-                <div className={`rounded-md bg-${alert.alertType}-50 p-4`}>
-                <div className="flex">
-                    <div className="flex-shrink-0">
-                    <button className={`h-5 w-5 text-${alert.alertType}-400`} aria-hidden="true" />
+                <div className={style.alert.alertType}>
+                <div className={style.div_3}>
+                    <div className={style.div_3}>
+                    <i className={style.alert.alertType} aria-hidden="true" />
                     </div>
-                    <div className="ml-3">
-                    <p className={`text-sm font-medium text-${alert.alertType}-800`}>{alert.msg}</p>
+                    <div className={style.div_3}>
+                    <p className={style.alert}>{alert.msg}</p>
                     </div>
                 </div>
                 </div>

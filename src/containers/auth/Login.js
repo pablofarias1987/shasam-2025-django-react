@@ -45,46 +45,6 @@ const Login = ({
 
   return (
     <Layout>
-      <div className=" ">
-        <div className=" ">
-          <img
-            className=" "
-            src=" "
-            alt=" "
-          />
-          <h2 className=" ">Iniciar con tu cuenta</h2>
-          <p className=" ">
-            O{' '}
-            <Link to="/signup" className=" ">
-              Registarse
-            </Link>
-          </p>
-        </div>
-
-        <div className=" ">
-          <div className=" ">
-          
-          <Form onSubmit={e=>onSubmit(e)}>
-              <Form.Group as={Col} md="3" controlId="formGroupEmail">
-                <Form.Label htmlFor="email">Email</Form.Label>
-                  <Form.Control type="email" value={email} name="email"
-                    onChange={e=>onChange(e)} placeholder="Ingresar email" required />
-               </Form.Group>
-               <Form.Group as={Col} md="3" controlId="formGroupPassword" className="position-relative">
-                <Form.Label htmlFor="password">Contraseña</Form.Label>
-                  <Form.Control type="password"   name="password"
-                    value={password}
-                    onChange={e=>onChange(e)} placeholder="Ingresar contraseña" required />
-              </Form.Group>
-                <div className="text-sm">
-                  <Link to="/reset_password" className=" ">
-                  ¿Olvidaste tu contraseña?
-                  </Link>
-                </div>
-                <Button variant="dark" type="submit">Iniciar sesion</Button>
-          </Form>
-  
-
 
         <div className={style.css_form}>
           <div class={style.login_container}>
@@ -128,9 +88,7 @@ const Login = ({
     </div></div>
 
             
-          </div>
-        </div>
-      </div>
+  
     </Layout>
   )
 }

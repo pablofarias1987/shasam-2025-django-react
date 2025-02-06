@@ -34,3 +34,28 @@
 .button2:hover {
     background-color: #b3f3b6; /* Darker Green */
   }
+
+.alert{
+    color: rgb(24, 199, 33);
+    font-weight: bold;
+    cursor: pointer;
+    float: center;
+    font-size: 22px;
+
+  }
+  .div_3{
+    float: center;
+  }
+
+  /* Estilos generales para la alerta */
+.alert {
+  padding: 20px;
+  background-color: #19c23e; /* Color de fondo */
+  color: white;              /* Color del texto */
+  font-size: 16px;           /* Tamaño del texto */
+  border-radius: 5px;        /* Bordes redondeados */
+  margin-bottom: 15px;       /* Espacio inferior */
+  width: 100%;               /* Ancho completo */
+  box-sizing: border-box;    /* Incluir el padding en el tamaño total */
+  transition: background-color 0.3s ease;
+}
