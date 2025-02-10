@@ -5,6 +5,8 @@ import {connect} from 'react-redux'
 import { reset_password_confirm } from '../../redux/actions/auth'
 import Loader from 'react-loader-spinner'
 import {Navigate, useParams} from 'react-router'
+import style from '../../components/Styles/Login.module.css';
+
 const ResetPasswordConfirm = ({
   reset_password_confirm,
   loading
@@ -94,7 +96,7 @@ const ResetPasswordConfirm = ({
               <div>
                 {loading ? 
                 <button
-                className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                className={style.login_btn}
               >
                 <Loader
                 type="Oval"
@@ -105,7 +107,7 @@ const ResetPasswordConfirm = ({
               </button>:
               <button
               type="submit"
-              className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              className={style.login_btn}
             >
               Reset password
             </button>}

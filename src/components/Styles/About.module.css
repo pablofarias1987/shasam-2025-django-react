@@ -39,7 +39,34 @@
     text-align: center;
     padding: 100px 20px;  /* Adjust padding for spacing */
     position: relative;
-    width: 1300px;
+    width: 100%;
     height: auto;
 }
 
+/* Media query for devices with a screen width of 600px or less */
+@media (max-width: 600px) {
+    .img {
+        width: 80%; /* Adjust the image width for smaller screens */
+    }
+  }
+  
+  /* Media query for devices with a screen width of 1200px or more */
+  @media (min-width: 1200px) {
+    .img {
+        width: 50%; /* Adjust the image width for larger screens */
+    }
+  }
+  
+  /* Media query for devices with a screen width of 600px or less */
+  @media (max-width: 600px) {
+    .p {
+        width: 50%; /* Adjust the image width for smaller screens */
+    }
+  }
+  
+  /* Media query for devices with a screen width of 1200px or more */
+  @media (min-width: 1200px) {
+    .p {
+        width: 80%; /* Adjust the image width for larger screens */
+    }
+  }

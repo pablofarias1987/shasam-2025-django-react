@@ -26,44 +26,44 @@ export default function Treatments() {
       </div>
 
        <div>
-       <Link to="/">
+       <Link to="/cannabis">
        <img src={cannabis} className={style.circle} alt="cannabis"/>
        </Link>
        <p className={style.p1}>Cannabis</p>
        </div>
        <div>
-       <Link to="/">
+       <Link to="/cocaine">
        <img src={cocaina} className={style.circle} alt="cocaina"/>
        </Link>
        <p className={style.p1}>Cocaína</p>
        </div>
 
        <div>
-       <Link to="/">
+       <Link to="/pills">
        <img src={pastillas} className={style.circle} alt="pastillas"/>
        </Link>
        <p className={style.p1}>Pastillas</p>
        </div>
        <div>
-       <Link to="/">
+       <Link to="/technology">
        <img src={tecnologia} className={style.circle} alt="tecnologia"/>
        </Link>
        <p className={style.p1}>Tecnología</p>
        </div>
        <div>
-       <Link to="/">
+       <Link to="/sex">
        <img src={sexo} className={style.circle} alt="sexo"/>
        </Link>
        <p className={style.p1}>Sexo</p>
        </div>
        <div>
-       <Link to="/">
+       <Link to="/gambling_addiction">
        <img src={ludopatia} className={style.circle} alt="ludopatia"/>
        </Link>
        <p className={style.p1}>Ludopatía</p>
        </div>
        <div>
-       <Link to="/">
+       <Link to="/base_paste">
        <img src={pasta_base} className={style.circle} alt="pasta base"/>
        </Link>
        <p className={style.p1}>Pasta Base</p>

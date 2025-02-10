@@ -9,7 +9,7 @@
 
 }
 .div2{
-    width:1300px;
+    width:100%;
     height: 800px; /* Ajusta la altura según lo que necesites */
     background-image: url('../../image/bglanding.jpg');
     background-size: cover; /* Hace que la imagen cubra todo el contenedor */
@@ -42,3 +42,50 @@
     background-color: rgba(0, 0, 0, 0.5); 
     transition: background-color 0.5s ease;
   }
+
+  /* Default styling for images */
+.img2 {
+  width: 100%;
+  height: auto;
+}
+
+/* Media query for devices with a screen width of 600px or less */
+@media (max-width: 600px) {
+  .img2 {
+      width: 80%; /* Adjust the image width for smaller screens */
+  }
+}
+
+/* Media query for devices with a screen width of 1200px or more */
+@media (min-width: 1200px) {
+  .img2 {
+      width: 50%; /* Adjust the image width for larger screens */
+  }
+}
+
+/* Media query for devices with a screen width of 600px or less */
+@media (max-width: 600px) {
+  .button2 {
+      width: 80%; /* Adjust the image width for smaller screens */
+  }
+}
+
+/* Media query for devices with a screen width of 1200px or more */
+@media (min-width: 1300px) {
+  .button2 {
+      width: 80%; /* Adjust the image width for larger screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .div2 {
+    background-image: url('../../image/bglanding.jpg');
+  }
+}
+
+/* Media query for devices with a screen width of 1200px or more */
+@media (max-width: 480px) {
+  .div2 {
+    background-image: url('../../image/bglanding.jpg');
+  }
+}

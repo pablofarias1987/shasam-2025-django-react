@@ -113,9 +113,13 @@ const logoutHandler = () => {
             </Nav>
             <Nav>
             {isAuthenticated?
-            <p></p>:<Link to="/login"><button  className={style.button2} >Iniciar de sesion</button></Link>}
+            <p></p>:<Link to="/login"><button  className={style.button2} >Iniciar de sesion</button></Link>
+            }
+
             {isAuthenticated?
-            <p></p>:<Link to="/signup"> <button  className={style.button1} >Registrarse</button></Link>}
+            <p></p>:<Link to="/signup"> <button  className={style.button1} >Registrarse</button></Link>
+            }
+
             {isAuthenticated?<Link to="/dashboard"
               
              ><button  className={style.button2}>

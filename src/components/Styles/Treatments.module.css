@@ -93,3 +93,30 @@
   /* width: 1200px; */
 
 }
+
+@media (max-width: 600px) {
+  .circle {
+      width: 50%; /* Adjust the image width for smaller screens */
+  }
+}
+
+/* Media query for devices with a screen width of 1200px or more */
+@media (min-width: 1200px) {
+  .circle {
+      width: 80%; /* Adjust the image width for larger screens */
+  }
+}
+
+
+@media (max-width: 600px) {
+  .p1 {
+      width: 50%; /* Adjust the image width for smaller screens */
+  }
+}
+
+/* Media query for devices with a screen width of 1200px or more */
+@media (min-width: 1200px) {
+  .p1 {
+      width: 80%; /* Adjust the image width for larger screens */
+  }
+}

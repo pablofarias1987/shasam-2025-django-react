@@ -14,6 +14,13 @@ import Programs from './containers/pages/Programs';
 import About from './containers/pages/About';
 import Treatments from './containers/pages/Treatments';
 import Alcohol from './containers/pages/treatments/Alcohol'
+import Cannabis from './containers/pages/treatments/Cannabis';
+import Cocaine from './containers/pages/treatments/Cocaine';
+import Gambling_addiction from './containers/pages/treatments/Gambling_addiction';
+import Pills from './containers/pages/treatments/Pills';
+import Sex from './containers/pages/treatments/Sex';
+import Technology from './containers/pages/treatments/Technology';
+import Base_Paste from './containers/pages/treatments/Base_Paste';
 
 
 
@@ -35,6 +42,13 @@ function App() {
           <Route exact path='/dashboard' element={<Dashboard/>}/>
           <Route exact path='/about' element={<About/>}/>
           <Route exact path='/alcohol' element={<Alcohol/>}/>
+          <Route exact path='/cocaine' element={<Cocaine/>}/>
+          <Route exact path='/gambling_addiction' element={<Gambling_addiction/>}/>
+          <Route exact path='/pills' element={<Pills/>}/>
+          <Route exact path='/sex' element={<Sex/>}/>
+          <Route exact path='/technology' element={<Technology/>}/>
+          <Route exact path='/base_paste' element={<Base_Paste/>}/>
+          <Route exact path='/cannabis' element={<Cannabis/>}/>
           <Route exact path='/programs' element={<Programs/>}/>
           <Route exact path='/treatments' element={<Treatments/>}/>
           <Route exact path='/thankyou' element={<ThankYou/>}/>

@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { connect } from 'react-redux'
 import { activate } from '../../redux/actions/auth'
 import { Navigate } from 'react-router'
+import style from '../../components/Styles/Login.module.css';
 
 import Loader from 'react-loader-spinner'
 
@@ -31,8 +32,7 @@ const Activate = ({
           <div className="max-w-3xl mx-auto">
           
           {loading ? 
-          <button
-            className="inline-flex mt-12 items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+          <button className={style.login_btn}
           >
             <Loader
             type="Oval"
@@ -43,7 +43,7 @@ const Activate = ({
           </button>:
           <button
           onClick={activate_account}
-          className="inline-flex mt-12 items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+          className={style.login_btn}
         >
           Activate Account
         </button>
