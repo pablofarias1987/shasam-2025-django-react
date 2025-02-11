@@ -125,10 +125,7 @@ const logoutHandler = () => {
              ><button  className={style.button2}>
                Mi cuenta</button>
              </Link>:
-             <a
-             href=""
-             className=""
-           >
+             <a>
              
            </a>}
 

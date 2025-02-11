@@ -301,7 +301,7 @@ export const signup = (first_name, last_name, email, dni, country, commune, addr
                 dispatch({
                     type: REMOVE_AUTH_LOADING
                 });
-                dispatch(setAlert('Password reset email sent', 'green'));
+                dispatch(setAlert('Para restablecer contraseña vaya a su email', 'green'));
             } else {
                 dispatch({
                     type: RESET_PASSWORD_FAIL
@@ -309,7 +309,7 @@ export const signup = (first_name, last_name, email, dni, country, commune, addr
                 dispatch({
                     type: REMOVE_AUTH_LOADING
                 });
-                dispatch(setAlert('Error sending password reset email', 'red'));
+                dispatch(setAlert('Error al enviar la restablecion de contraseña a su email', 'red'));
             }
         }
         catch(err){
@@ -319,7 +319,7 @@ export const signup = (first_name, last_name, email, dni, country, commune, addr
             dispatch({
                 type: REMOVE_AUTH_LOADING
             });
-            dispatch(setAlert('Error sending password reset email', 'red'));
+            dispatch(setAlert('Error al enviar la restablecion de contraseña a su email', 'red'));
         }
     }
     
@@ -348,7 +348,7 @@ export const signup = (first_name, last_name, email, dni, country, commune, addr
             dispatch({
                 type: REMOVE_AUTH_LOADING
             });
-            dispatch(setAlert('Passwords do not match', 'red'));
+            dispatch(setAlert('Las contraseñas no coinciden', 'red'));
         } else {
             try {
                 const res = await axios.post(`${process.env.REACT_APP_API_URL}/auth/users/reset_password_confirm/`, body, config);
@@ -360,7 +360,7 @@ export const signup = (first_name, last_name, email, dni, country, commune, addr
                     dispatch({
                         type: REMOVE_AUTH_LOADING
                     });
-                    dispatch(setAlert('Password has been reset successfully', 'green'));
+                    dispatch(setAlert('La contraseña se restablecio satifactoriamente', 'green'));
                 } else {
                     dispatch({
                         type: RESET_PASSWORD_CONFIRM_FAIL
@@ -368,7 +368,7 @@ export const signup = (first_name, last_name, email, dni, country, commune, addr
                     dispatch({
                         type: REMOVE_AUTH_LOADING
                     });
-                    dispatch(setAlert('Error resetting your password', 'red'));
+                    dispatch(setAlert('Error al restablecer contraseña', 'red'));
                 }
             } catch(err){
                 dispatch({
@@ -377,7 +377,7 @@ export const signup = (first_name, last_name, email, dni, country, commune, addr
                 dispatch({
                     type: REMOVE_AUTH_LOADING
                 });
-                dispatch(setAlert('Error resetting your password', 'red'));
+                dispatch(setAlert('Error al restablecer contraseña', 'red'));
             }
         }
     }
@@ -386,5 +386,5 @@ export const signup = (first_name, last_name, email, dni, country, commune, addr
         dispatch({
             type: LOGOUT
         });
-        dispatch(setAlert('Succesfully logged out', 'green'));
+        dispatch(setAlert('Cerro sesion sactifactoriamente', 'green'));
     }

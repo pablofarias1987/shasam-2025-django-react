@@ -27,12 +27,12 @@ const Activate = ({
     
     return (
       <Layout>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* We've used 3xl here, but feel free to try other max-widths based on your needs */}
-          <div className="max-w-3xl mx-auto">
+        <div className={style.login_container} >
+          
+          <div >
           
           {loading ? 
-          <button className={style.login_btn}
+          <button className={style.activate_btn}
           >
             <Loader
             type="Oval"
@@ -43,9 +43,9 @@ const Activate = ({
           </button>:
           <button
           onClick={activate_account}
-          className={style.login_btn}
+          className={style.activate_btn}
         >
-          Activate Account
+          Activar cuenta
         </button>
         }
 

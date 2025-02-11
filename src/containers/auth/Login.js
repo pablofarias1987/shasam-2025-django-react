@@ -5,9 +5,6 @@ import {connect} from 'react-redux'
 import { login } from '../../redux/actions/auth'
 import { Navigate } from 'react-router'
 import Loader from 'react-loader-spinner'
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
-import Col from 'react-bootstrap/Col';
 import style from '../../components/Styles/Login.module.css';
 
 

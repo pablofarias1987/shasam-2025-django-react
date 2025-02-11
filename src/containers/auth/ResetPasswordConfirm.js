@@ -46,23 +46,15 @@ const ResetPasswordConfirm = ({
 
   return (
     <Layout>
-      <div className="min-h-full flex flex-col justify-center py-12 sm:px-6 lg:px-8">
-        <div className="sm:mx-auto sm:w-full sm:max-w-md">
-          <img
-            className="mx-auto h-12 w-auto"
-            src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-            alt="Workflow"
-          />
-          <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">Set your new password</h2>
-          
-        </div>
 
-        <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
-          <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
-            <form onSubmit={e=>onSubmit(e)} className="space-y-6">
+
+        <div className={style.css_form}>
+          <div class={style.login_container}>
+            <form onSubmit={e=>onSubmit(e)} class={style.login_form}>
+            <h2 className={style.h2}>Ingresa tu nueva contraseña</h2>
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                  Password
+                  Contraseña
                 </label>
                 <div className="mt-1">
                   <input
@@ -78,7 +70,7 @@ const ResetPasswordConfirm = ({
               </div>
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                  Repeat Password
+                  Repetir contraseña
                 </label>
                 <div className="mt-1">
                   <input
@@ -109,13 +101,13 @@ const ResetPasswordConfirm = ({
               type="submit"
               className={style.login_btn}
             >
-              Reset password
+              Restablecer contraseña
             </button>}
               </div>
             </form>
           </div>
         </div>
-      </div>
+ 
     </Layout>
   )
 }
