@@ -2,7 +2,7 @@ import Layout from '../hocs/Layout'
 import style from '../components/Styles/Home.module.css';
 import {connect} from 'react-redux'
 import img from '../image/bglanding.jpg';
-
+import Alert from '../components/alert'
 import { Link } from 'react-router-dom';
 
 function Home({isAuthenticated}) {
@@ -25,6 +25,7 @@ function Home({isAuthenticated}) {
             </Link>}
 
 </div>
+<Alert/>
         </Layout>)
 }
 

@@ -1,6 +1,6 @@
 import Layout from '../../hocs/Layout'
 import { useState, useEffect } from 'react'
-
+import { Navigate } from 'react-router'
 import {connect} from 'react-redux'
 import { signup } from '../../redux/actions/auth'
 import Button from 'react-bootstrap/Button';
@@ -11,7 +11,8 @@ import Row from 'react-bootstrap/Row';
 import style from '../../components/Styles/Signup.module.css';
 
 const Signup = ({
-  signup
+  signup,
+  isAuthenticated
 }) => {
 
   useEffect(() => {
@@ -52,6 +53,9 @@ const Signup = ({
     setAccountCreated(true);
     window.scrollTo(0,0)
   }
+
+  if(isAuthenticated)
+    return <Navigate to="/"/>
 
   return (
     <Layout>
@@ -230,6 +234,7 @@ const Signup = ({
   )
 }
 const mapStateToProps = state => ({
+  isAuthenticated: state.Auth.isAuthenticated
 
 })
 

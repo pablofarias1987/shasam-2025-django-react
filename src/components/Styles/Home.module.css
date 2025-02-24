@@ -4,8 +4,9 @@
     background-size: auto;
     color: white;
     padding: auto ;   /*Adjust padding for spacing */
-    position: relative;
     width:1300px;
+    position: relative; /* Necesario para posicionar el contenido dentro */
+    display: inline-block;
 
 }
 .div2{

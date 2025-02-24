@@ -35,28 +35,31 @@
     background-color: #b3f3b6; /* Darker Green */
   }
 
-.alert{
+/* .alert{
     color: rgb(24, 199, 33);
     font-weight: bold;
     cursor: pointer;
     float: center;
     font-size: 22px;
+    position: absolute; /* Posiciona la alerta sobre la imagen */
 
-  }
+
   .div_3{
     float: center;
   }
 
   /* Estilos generales para la alerta */
 .alert {
+  position: absolute; /* Posiciona la alerta sobre la imagen */
   padding: 20px;
-  background-color: #19c23e; /* Color de fondo */
-  color: white;              /* Color del texto */
-  font-size: 16px;           /* Tamaño del texto */
-  border-radius: 5px;        /* Bordes redondeados */
-  margin-bottom: 15px;       /* Espacio inferior */
-  width: 100%;               /* Ancho completo */
-  box-sizing: border-box;    /* Incluir el padding en el tamaño total */
-  transition: background-color 0.3s ease;
+  top: 90px;  /* Distancia desde la parte superior */
+  left: 20px; /* Distancia desde el lado izquierdo */
+  background-color: rgba(224, 34, 27, 0.7); /* Fondo rojo con opacidad */
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  
 }
 

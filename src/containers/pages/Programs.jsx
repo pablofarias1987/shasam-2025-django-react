@@ -1,5 +1,6 @@
 import Layout from '../../hocs/Layout'
 import style from '../../components/Styles/Programs.module.css';
+import Alert from '../../components/alert'
 
 
 export default function Programs() {
@@ -76,6 +77,7 @@ Rehabilitar y reinsertar en la sociedad a personas de 18 y 60 años de edad, con
 5. Es altamente deseable contar con familiares y un apoderado significativo que apoyen a la persona durante el tratamiento.<br></br>
 </p>
         </div>
+        <Alert/>
         </Layout>)
 }
 

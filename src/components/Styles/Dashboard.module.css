@@ -1,0 +1,40 @@
+.h3_3{
+    
+    display: flex;
+    color:rgb(18, 138, 218);
+    margin-top: 20px;
+    padding: 10;
+    font-size: 32px;
+
+}
+
+.p1 {
+    color:rgb(73, 69, 80);
+    font-size: 20px;
+    flex-wrap: wrap;
+    padding: 15px;
+    margin: 10px;
+}
+
+.button1{
+    background-color: rgb(17, 17, 17);
+    color:  white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: background-color 0.3s;
+}
+
+.div2{
+    justify-content: space-around;
+    margin-top: 10px;
+    padding: 15px;
+    /* width: 1200px; */
+  
+  }

@@ -10,7 +10,8 @@ import style from '../../components/Styles/Login.module.css';
 
 const Login = ({
   login,
-  loading
+  loading,
+  isAuthenticated,
 }) => {
 
   useEffect(() => {
@@ -37,9 +38,8 @@ const Login = ({
     setActivated(true);
   }
 
-  if (activated)
-    return <Navigate to='/' />;
-
+  if(isAuthenticated)
+    return <Navigate to="/"/>
   return (
     <Layout>
 
@@ -90,7 +90,8 @@ const Login = ({
   )
 }
 const mapStateToProps = state => ({
-  loading: state.Auth.loading
+  loading: state.Auth.loading,
+  isAuthenticated: state.Auth.isAuthenticated
 })
 
 export default connect(mapStateToProps, {

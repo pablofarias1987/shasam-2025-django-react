@@ -1,6 +1,7 @@
 import Layout from '../../hocs/Layout'
 import style from '../../components/Styles/About.module.css';
 import img from '../../image/about.jpeg';
+import Alert from '../../components/alert'
 
 export default function About() {
 
@@ -18,6 +19,7 @@ export default function About() {
         <h1 className={style.h1}>Nuestro Equipo</h1>
         <p className={style.p}> En SHASAM contamos con un equipo multidiciplinario compuesto por Psicólog@s, Psiquiatras, Monitores de apoyo, Asistente social y Técnicos en rehabilitación. </p>
         </div>
+        <Alert/>
     </Layout>)
 }
 
