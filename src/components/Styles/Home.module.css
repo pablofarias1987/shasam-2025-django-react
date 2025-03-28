@@ -74,7 +74,7 @@
 /* Media query for devices with a screen width of 1200px or more */
 @media (min-width: 1300px) {
   .button2 {
-      width: 80%; /* Adjust the image width for larger screens */
+      width: 100%; /* Adjust the image width for larger screens */
   }
 }
 

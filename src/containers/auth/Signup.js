@@ -142,7 +142,7 @@ const Signup = ({
               <Form.Label htmlFor="country">Ciudad</Form.Label>
               <Form.Control
                 type="text"
-                placeholder="Ingresqar ciudad"
+                placeholder="Ingresar ciudad"
                 name="country"
                 value={country}
                 onChange={e=>onChange(e)}

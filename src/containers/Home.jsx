@@ -8,7 +8,8 @@ import { Link } from 'react-router-dom';
 function Home({isAuthenticated}) {
 
 
-    return(<Layout>
+    return(
+    <Layout>
         <div className={style.div2}>
         {/* <img src={img} className={style.img2} alt="h"></img> */}
         {/* <p className={style.p1}> Comienza tu terapia
@@ -24,9 +25,10 @@ function Home({isAuthenticated}) {
               </button>
             </Link>}
 
-</div>
-<Alert/>
-        </Layout>)
+        </div>
+      <Alert/>
+        </Layout>
+        )
 }
 
 

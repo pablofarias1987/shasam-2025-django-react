@@ -26,7 +26,7 @@ const Dashboard =({
   
 
     if(!isAuthenticated)
-        return <Navigate to="/"/>
+        return <Navigate to="/login"/>
 
     return (
         <Layout>

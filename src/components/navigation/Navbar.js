@@ -122,15 +122,21 @@ const logoutHandler = () => {
 
             {isAuthenticated?<Link to="/dashboard"
               
-             ><button  className={style.button2}>
-               Mi cuenta</button>
+             ><div className={style.dropdown}>
+             <button className={style.dropbtn}>Mi perfil</button>
+             <div className={style.dropdown_content}>
+                 <a href="#">Mis datos</a>
+                 <a href="#">Datos de apoderado</a>
+                 <a href="#" onClick={logoutHandler}>Cerrar sesion</a>
+             </div>
+            </div>
              </Link>:
              <a>
              
            </a>}
 
-           {isAuthenticated?<button  className={style.button1} onClick={logoutHandler} >Cerrar sesion</button>:
-             <a></a>}
+           {/* {isAuthenticated?<button  className={style.button1} onClick={logoutHandler} >Cerrar sesion</button>:
+             <a></a>} */}
             {/* <NavDropdown title="Cuenta" id="basic-nav-dropdown">
               <NavDropdown.Item href="/login">Iniciar de sesion</NavDropdown.Item>
               <NavDropdown.Item href="/signup">
